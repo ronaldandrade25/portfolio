@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090F">
+  <title>Ronald Andrade — Desenvolvedor Fullstack</title>
+  <meta name="description" content="Ronald Andrade — Desenvolvedor Fullstack, builder de SaaS e especialista em automação com IA. Recife, PE.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234F6EF7'/%3E%3Ctext x='50' y='68' font-size='46' font-family='monospace' font-weight='900' fill='%23fff' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Folha de estilos externa -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <!-- Navegação fixa no topo, com efeito de vidro (glassmorphism) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">RA/</a>
+
+      <!-- Links de navegação (desktop) -->
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="nav-mobile" id="navMobile">
+      <a href="#sobre">Sobre</a>
+      <a href="#stack">Stack</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="hero">
+    <div class="hero-container">
+
+      <!-- Texto principal do hero -->
+      <div class="hero-text">
+        <!-- Badge de disponibilidade com dot pulsante -->
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Disponível para novos projetos
+        </div>
+
+        <p class="greeting">Olá, eu sou</p>
+        <h1 class="hero-name">Ronald Andrade</h1>
+
+        <!-- Título com efeito typewriter (preenchido via JS) -->
+        <div class="hero-title">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </div>
+
+        <p class="hero-meta">📍 Recife, PE — Brasil &nbsp;·&nbsp; RA Sistema</p>
+
+        <!-- Botões de ação -->
+        <div class="hero-cta">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <!-- Substitua pelo link real do seu currículo em PDF -->
+          <a href="curriculo.pdf" class="btn btn-outline" download>Baixar Currículo</a>
+        </div>
+
+        <!-- Ícones de contato -->
+        <div class="hero-socials">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/ronaldandrade" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM6.999 20.452H3.667V9h3.332v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/55819XXXXXXXX" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.463 3.488A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/ronaldandrade" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <!-- E-mail -->
+          <a href="mailto:ronald@rasistema.com.br" class="social-icon" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto de perfil -->
+      <div class="hero-photo-wrap">
+        <!-- Substitua foto.jpg pela sua foto real -->
+        <img src="./assets/ronald.jpeg" alt="Ronald Andrade" class="profile-photo" width="300" height="300">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <!-- Foto (lado esquerdo no desktop, topo no mobile) -->
+        <div class="sobre-photo-wrap fade-in">
+          <!-- Substitua foto.jpg pela sua foto real -->
+          <img src="./assets/ronald.jpeg" alt="Ronald Andrade" class="sobre-photo" width="200" height="200">
+        </div>
+
+        <!-- Texto + métricas -->
+        <div class="fade-in">
+          <h2 class="section-title">Sobre mim</h2>
+          <p class="sobre-text">
+            Sou Ronald, desenvolvedor Fullstack e builder de sistemas reais. Comecei como
+            empreendedor tecnológico e hoje construo plataformas SaaS, sistemas de gestão,
+            CRM com IA e automações do zero. Cada projeto que entrego é uma solução real
+            rodando em produção.
+          </p>
+
+          <!-- Métricas em cards -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-number">6+</span>
+              <span class="metric-label">Projetos em produção</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">3+</span>
+              <span class="metric-label">Anos como dev</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">10+</span>
+              <span class="metric-label">Sistemas entregues</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">Recife, PE</span>
+              <span class="metric-label">Localização</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco de código estilo terminal, com auto-scroll em loop -->
+      <div class="terminal fade-in">
+        <div class="terminal-header">
+          <span class="terminal-dot dot-red"></span>
+          <span class="terminal-dot dot-yellow"></span>
+          <span class="terminal-dot dot-green"></span>
+          <span class="terminal-title">ronald.js</span>
+        </div>
+        <div class="terminal-body">
+          <!-- O conteúdo é duplicado para permitir o loop contínuo do scroll -->
+          <div class="terminal-content">
+            <pre><code><span class="tok-kw">const</span> ronaldAndrade = {
+  especialidades: [<span class="tok-str">"Fullstack"</span>, <span class="tok-str">"SaaS"</span>, <span class="tok-str">"Automação IA"</span>],
+  stack: {
+    frontend: [<span class="tok-str">"React"</span>, <span class="tok-str">"JavaScript"</span>, <span class="tok-str">"Tailwind"</span>],
+    backend: [<span class="tok-str">"Node.js"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"API"</span>],
+    ia: [<span class="tok-str">"Claude"</span>, <span class="tok-str">"ChatGPT"</span>, <span class="tok-str">"GPT Maker"</span>, <span class="tok-str">"n8n"</span>]
+  },
+  diferencial: <span class="tok-str">"sistemas_reais_em_producao"</span>,
+  disponivel: <span class="tok-bool">true</span>,
+};</code></pre>
+            <pre><code><span class="tok-kw">const</span> ronaldAndrade = {
+  especialidades: [<span class="tok-str">"Fullstack"</span>, <span class="tok-str">"SaaS"</span>, <span class="tok-str">"Automação IA"</span>],
+  stack: {
+    frontend: [<span class="tok-str">"React"</span>, <span class="tok-str">"JavaScript"</span>, <span class="tok-str">"Tailwind"</span>],
+    backend: [<span class="tok-str">"Node.js"</span>, <span class="tok-str">"Express"</span>, <span class="tok-str">"API"</span>],
+    ia: [<span class="tok-str">"Claude"</span>, <span class="tok-str">"ChatGPT"</span>, <span class="tok-str">"GPT Maker"</span>, <span class="tok-str">"n8n"</span>]
+  },
+  diferencial: <span class="tok-str">"sistemas_reais_em_producao"</span>,
+  disponivel: <span class="tok-bool">true</span>,
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section class="section stack" id="stack">
+    <div class="container">
+      <h2 class="section-title fade-in">Stack Técnica</h2>
+      <p class="section-subtitle fade-in">Tecnologias e ferramentas que uso para construir sistemas reais</p>
+
+      <div class="stack-groups">
+        <!-- Frontend -->
+        <div class="stack-group fade-in">
+          <h3 class="stack-group-title">Frontend</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">⚛️</span> React</div>
+            <div class="stack-item"><span class="stack-icon">🟨</span> JavaScript</div>
+            <div class="stack-item"><span class="stack-icon">🌐</span> HTML5/CSS3</div>
+            <div class="stack-item"><span class="stack-icon">💨</span> Tailwind CSS</div>
+            <div class="stack-item"><span class="stack-icon">⚡</span> Vite</div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="stack-group fade-in">
+          <h3 class="stack-group-title">Backend</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">🟢</span> Node.js</div>
+            <div class="stack-item"><span class="stack-icon">🚂</span> Express.js</div>
+            <div class="stack-item"><span class="stack-icon">🔌</span> API</div>
+            <div class="stack-item"><span class="stack-icon">🪝</span> Webhooks</div>
+            <div class="stack-item"><span class="stack-icon">🐳</span> Docker</div>
+            <div class="stack-item"><span class="stack-icon">🍃</span> MongoDB</div>
+            <div class="stack-item"><span class="stack-icon">⚡</span> Supabase</div>
+            <div class="stack-item"><span class="stack-icon">🔥</span> Firebase</div>
+            <div class="stack-item"><span class="stack-icon">🐝</span> Beekeeper Studio</div>
+          </div>
+        </div>
+
+        <!-- IA & Automação -->
+        <div class="stack-group fade-in">
+          <h3 class="stack-group-title">IA &amp; Automação</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">🧠</span> Claude AI</div>
+            <div class="stack-item"><span class="stack-icon">🤖</span> ChatGPT</div>
+            <div class="stack-item"><span class="stack-icon">🛠️</span> GPT Maker</div>
+            <div class="stack-item"><span class="stack-icon">🔗</span> n8n</div>
+            <div class="stack-item"><span class="stack-icon">🔮</span> OpenAI API</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="stack-footer fade-in">Sempre evoluindo. Próximos passos: TypeScript, testes automatizados.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PROJETOS ===================== -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <h2 class="section-title fade-in">Projetos em Destaque</h2>
+      <p class="section-subtitle fade-in">Sistemas fullstack construídos do zero e em produção</p>
+
+      <div class="projects-grid">
+
+        <!-- 1. Dev Freelance -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="./assets/DevFreelance.png" alt="Dev Freelance" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">🎓</span>
+              <span class="fallback-name">Dev Freelance</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">SaaS · Educação</span>
+            <h3 class="project-title">Dev Freelance</h3>
+            <p class="project-desc">Plataforma de cursos online para devs freelancers. Módulos de vídeo com progresso, gestão de alunos, convites e comunidade.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">Vercel</span>
+              <span class="pill">Render</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://frontend-dev-freelancer.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Visitar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Dengo de Vestir -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="/assets/dengodevestir.png" alt="Dengo de Vestir" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">👕</span>
+              <span class="fallback-name">Dengo de Vestir</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">Sistema · Varejo</span>
+            <h3 class="project-title">Dengo de Vestir</h3>
+            <p class="project-desc">Sistema de gestão para loja de roupas infantil. Controle de estoque, vendas e painel administrativo completo.</p>
+            <div class="tech-pills">
+              <span class="pill">React + Vite</span>
+              <span class="pill">Express</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">Render</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://dengodevestir.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Visitar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Barbearia RA -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="./assets/barbearia.png" alt="Barbearia RA" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">💈</span>
+              <span class="fallback-name">Barbearia RA</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">Automação · Agendamento</span>
+            <h3 class="project-title">Barbearia RA</h3>
+            <p class="project-desc">Bot de WhatsApp com IA para agendamento automático. O cliente agenda sem intervenção humana, integrado com GPT Maker.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">GPT Maker</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://adm-agendamento-vt.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Visitar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Sistema Salão de Beleza -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="./assets/salão.png" alt="Sistema Salão de Beleza" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">💇</span>
+              <span class="fallback-name">Sistema Salão de Beleza</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">Automação · Agendamento</span>
+            <h3 class="project-title">Sistema Salão de Beleza</h3>
+            <p class="project-desc">Bot de WhatsApp com IA para agendamento automático de salão de beleza. As clientes agendam serviços sem intervenção humana, integrado com GPT Maker.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">GPT Maker</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://adm-salaodebeleza.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Visitar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Sistema Pet Shop -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="./assets/petshop.png" alt="Sistema Pet Shop" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">🐾</span>
+              <span class="fallback-name">Sistema Pet Shop</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">Automação · Agendamento</span>
+            <h3 class="project-title">Sistema Pet Shop</h3>
+            <p class="project-desc">Bot de WhatsApp com IA para agendamento automático de pet shop. Os clientes agendam banho, tosa e consultas sem intervenção humana, integrado com GPT Maker.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">GPT Maker</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://adm-petshop.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-link">
+                Visitar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. RA Sistema (CRM com IA) -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="projeto-rasistema.jpg" alt="RA Sistema (CRM com IA)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">🤖</span>
+              <span class="fallback-name">RA Sistema (CRM com IA)</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">CRM · IA</span>
+            <h3 class="project-title">RA Sistema (CRM com IA)</h3>
+            <p class="project-desc">Plataforma empresarial completa: CRM, PDV, agentes de IA, sala de reuniões inteligente e geração de conteúdo.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Express</span>
+              <span class="pill">Claude API</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Firebase</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-link disabled">Em breve</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. RA Acessórios -->
+        <article class="project-card fade-in">
+          <div class="project-image">
+            <!-- Substitua pela screenshot real do projeto -->
+            <img src="projeto-acessorios.jpg" alt="RA Acessórios" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="project-fallback" style="display:none;">
+              <span class="fallback-icon">🛍️</span>
+              <span class="fallback-name">RA Acessórios</span>
+            </div>
+            <span class="status-badge status-producao">Em produção</span>
+          </div>
+          <div class="project-body">
+            <span class="type-badge">E-commerce</span>
+            <h3 class="project-title">RA Acessórios</h3>
+            <p class="project-desc">Loja de acessórios e eletrônicos com integração a marketplaces e fluxos de venda automatizados.</p>
+            <div class="tech-pills">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">APIs</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-link disabled">Em breve</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="section" id="contato">
+    <div class="container">
+      <h2 class="section-title fade-in">Vamos construir juntos?</h2>
+      <p class="section-subtitle fade-in">Aberto a projetos freelance, parcerias e automações. Entre em contato por qualquer canal abaixo.</p>
+
+      <div class="contact-grid">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/ronaldandrade" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM6.999 20.452H3.667V9h3.332v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+          </span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/ronaldandrade</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/55819XXXXXXXX" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.463 3.488A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+          </span>
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-value">Chamar no WhatsApp</span>
+        </a>
+
+        <!-- E-mail -->
+        <a href="mailto:ronald@rasistema.com.br" class="contact-card fade-in">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          </span>
+          <span class="contact-label">E-mail</span>
+          <span class="contact-value">ronald@rasistema.com.br</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ronaldandrade" target="_blank" rel="noopener noreferrer" class="contact-card fade-in">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/ronaldandrade</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="logo">RA/</span>
+        <p>Ronald Andrade · Desenvolvedor Fullstack · Recife, Brasil</p>
+      </div>
+      <div class="footer-right">
+        <p>© 2025 Ronald Andrade · RA Sistema. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPT ===================== -->
+  <!-- Script externo com o typewriter, menu mobile e fade-in -->
+  <script src="script.js"></script>
+
+</body>
+</html>
